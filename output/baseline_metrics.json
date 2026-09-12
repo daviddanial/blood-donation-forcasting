@@ -1,0 +1,87 @@
+{
+  "target": "collection",
+  "region": "national",
+  "feature_columns": [
+    "week_of_year",
+    "weekend",
+    "dow_sin",
+    "dow_cos",
+    "month_sin",
+    "month_cos",
+    "is_lent",
+    "is_ramadan",
+    "is_eid",
+    "is_public_holiday",
+    "days_until_easter",
+    "lag_0",
+    "lag_1",
+    "lag_2",
+    "lag_7",
+    "lag_14",
+    "lag_28",
+    "roll_mean_7",
+    "roll_std_7",
+    "roll_mean_30",
+    "roll_std_30"
+  ],
+  "windows": {
+    "start": "2020-01-01",
+    "end": "2024-12-31"
+  },
+  "horizons": [
+    {
+      "horizon": 7,
+      "n_train": 1430,
+      "n_val": 183,
+      "n_test": 178,
+      "xgboost": {
+        "mae": 18.551240899589626,
+        "rmse": 23.60320401387903,
+        "mape": 8.201145102426857
+      },
+      "persistence": {
+        "mae": 22.98876404494382
+      },
+      "dates": {
+        "test_start": "2024-06-30",
+        "test_end": "2024-12-24"
+      }
+    },
+    {
+      "horizon": 30,
+      "n_train": 1430,
+      "n_val": 183,
+      "n_test": 155,
+      "xgboost": {
+        "mae": 22.4796880906628,
+        "rmse": 27.84861609447381,
+        "mape": 9.562644202358273
+      },
+      "persistence": {
+        "mae": 54.83870967741935
+      },
+      "dates": {
+        "test_start": "2024-06-30",
+        "test_end": "2024-12-01"
+      }
+    },
+    {
+      "horizon": 90,
+      "n_train": 1430,
+      "n_val": 183,
+      "n_test": 95,
+      "xgboost": {
+        "mae": 20.545098716334294,
+        "rmse": 25.862025348401946,
+        "mape": 8.387672686563038
+      },
+      "persistence": {
+        "mae": 46.96842105263158
+      },
+      "dates": {
+        "test_start": "2024-06-30",
+        "test_end": "2024-10-02"
+      }
+    }
+  ]
+}

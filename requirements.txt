@@ -1,0 +1,30 @@
+# Ethiopian National Blood Supply Chain - Predictive Intelligence
+# Core dependencies for the simulation + XGBoost baseline pipeline.
+#
+# Install with:
+#   python3 -m venv .venv
+#   .venv/bin/pip install -r requirements.txt
+
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+
+# xgboost is PREFERRED by the baseline. If it is missing, the code falls back to
+# scikit-learn's HistGradientBoostingRegressor (same tree family), so the pipeline
+# still runs. Install it for the full experience.
+xgboost>=2.0
+
+# matplotlib produces the forecast-vs-actual PNG. If missing, plotting is skipped.
+matplotlib>=3.7
+
+# convertdate supplies the Hijri (Ramadan) calendar. If missing, Ramadan flags
+# become 0 (Great Lent is computed in pure Python and still works).
+convertdate>=2.4
+
+# Optional - needed only for the CEEMDAN decomposition stage, not the baseline:
+# PyEMD>=1.4
+# Optional - needed only for SHAP interpretability (Obj 5):
+# shap>=0.44
+# Optional - deep-learning models (TFT / BiLSTM), installed separately:
+# pytorch-forecasting>=1.0   (needs torch)
+# tensorflow>=2.15           (needs GPU/CPU runtime)

@@ -1,0 +1,10 @@
+# Python / project
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Generated data & outputs (regenerate with `python -m src.run_pipeline`)
+data/*.csv
+output/*.png
