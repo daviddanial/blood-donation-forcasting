@@ -22,12 +22,8 @@ rewriting the models.
 - A working `python3` + `pip`
 - Internet access for the one-time package install
 
-All commands below are run from the **project root** (the folder containing
-`src/`, `data/` and `output/`):
-
-```bash
-cd blood_forecast
-```
+All commands below are run from the **project root** — the root of this repo,
+i.e. the folder containing `src/`, `data/` and `output/`.
 
 > If the project root sits inside a parent folder whose name contains a space,
 > remember to **quote** the full path in shell commands.
@@ -35,7 +31,7 @@ cd blood_forecast
 ## 2. Install
 
 ```bash
-cd blood_forecast
+cd blood_forecast      # or the path to your clone
 
 # Create and activate an isolated environment
 python3 -m venv .venv
